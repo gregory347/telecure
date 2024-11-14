@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teleCure Services</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="/images/fave.png" sizes="32x32">
+</head>
+
+<body id="services-page">
+    <header>
+        <img src="/images/fave.png" alt="Fever Icon" width="100" height="100">
+        <div class="logo" style="flex: 1;">
+            <h1>teleCure hospital</h1>
+        </div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars" onclick="toggleMenu()"></i>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="tabs">
+            <button class="tab-link active" onclick="openTab('hospital')">Hospital Services</button>
+            <button class="tab-link" onclick="openTab('online')">Online Services</button>
+        </div>
+
+        <div id="hospital" class="tab-content active">
+            <h2>Our Hospital Services</h2>
+            <p>Explore the various services offered at our hospital, including radiology, cardiology, and more.</p>
+
+            <div class="service">
+                <img src="https://images.pexels.com/photos/6812430/pexels-photo-6812430.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Radiology Service" class="service-image">
+                <div>
+                    <h3>Radiology</h3>
+                    <p>Steps to get radiation for cancer patients:</p>
+                    <ol>
+                        <li>Consult with your oncologist.</li>
+                        <li>Schedule an appointment for imaging.</li>
+                        <li>Follow pre-procedure instructions.</li>
+                        <li>Undergo the radiation therapy.</li>
+                    </ol>
+                    <p><strong>Doctors in Charge:</strong> Dr. Smith, Dr. Johnson</p>
+                </div>
+            </div>
+
+            <div class="service">
+                <img src="https://images.pexels.com/photos/8460220/pexels-photo-8460220.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Cardiology Service" class="service-image">
+                <div>
+                    <h3>Cardiology</h3>
+                    <p>Our cardiology department offers a wide range of services:</p>
+                    <ul>
+                        <li>Heart screenings and diagnostic tests</li>
+                        <li>Management of heart diseases</li>
+                        <li>Cardiac rehabilitation</li>
+                    </ul>
+                    <p><strong>Doctors in Charge:</strong> Dr. Brown, Dr. Lee</p>
+                </div>
+            </div>
+
+            <div class="service">
+                <img src="https://images.pexels.com/photos/8459996/pexels-photo-8459996.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Hospital Lobby" class="service-image">
+                <div>
+                    <h3>Hospital Facilities</h3>
+                    <p>Our facilities are equipped with state-of-the-art technology to ensure patient comfort and
+                        safety.</p>
+                    <p>The twenty-four hours surveillance Ambulance is fully equipped with technological trends since
+                        it's also online.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="online" class="tab-content">
+            <h2>Online Consultation Services</h2>
+            <p>We also offer virtual consultations with our expert doctors. Book your online appointment today.</p>
+
+            <div class="service">
+                <img src="https://images.pexels.com/photos/6011598/pexels-photo-6011598.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Online Consultation" class="service-image">
+                <div>
+                    <h3>Virtual Doctor Consultation</h3>
+                    <p>Consult with experienced specialists from the comfort of your home. Our online platform offers
+                        virtual consultations for initial assessments, follow-ups, and regular checkups.</p>
+                    <p>Receive medical advice, treatment plans, and prescriptions during a secure video call with our
+                        doctors.</p>
+                    <p><strong>Available 24/7:</strong> Schedule appointments at your convenience.</p>
+                </div>
+            </div>
+
+            <div class="service">
+                <img src="https://images.pexels.com/photos/8376181/pexels-photo-8376181.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Doctor Video Call" class="service-image">
+                <div>
+                    <h3>Doctor Video Call</h3>
+                    <p>Get personalized medical attention through video calls. Our doctors will assess your symptoms,
+                        guide you through medical procedures, and provide treatment recommendations in real-time.</p>
+                    <p><strong>Key Benefits:</strong> No wait times, direct consultation from home.</p>
+                </div>
+            </div>
+
+            <div class="service">
+                <img src="https://images.pexels.com/photos/17891257/pexels-photo-17891257/free-photo-of-woman-holding-pill-and-glass-of-water.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Virtual Prescription" class="service-image">
+                <div>
+                    <h3>Virtual Prescription</h3>
+                    <p>After your consultation, receive your prescription online. Our virtual prescription system
+                        ensures
+                        that your medication can be ordered directly to your preferred pharmacy or delivered to your
+                        doorstep.</p>
+                    <p><strong>Convenience:</strong> Get the treatment you need without delays.</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="testimonials-section">
+            <h2>Patient Testimonials</h2>
+            <div class="testimonials-container">
+                <div class="testimonial">
+                    <img src="/images/user 1.png" alt="User 1" class="testimonial-image">
+                    <p>The services at teleCure are top-notch, and the staff is highly professional. Highly recommend!
+                    </p>
+                </div>
+                <div class="testimonial">
+                    <img src="/images/user 2.png" alt="User 2" class="testimonial-image">
+                    <p>I had a great experience with their online consultation service. Very convenient and efficient.
+                    </p>
+                </div>
+                <div class="testimonial">
+                    <img src="/images/user 3.png" alt="User 3" class="testimonial-image">
+                    <p>teleCure's hospital facilities are excellent, and the care provided is unparalleled.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 teleCure hospital</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

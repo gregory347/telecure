@@ -1,0 +1,36 @@
+INSERT INTO Patients (
+        first_name,
+        last_name,
+        email,
+        password_hash,
+        phone,
+        date_of_birth,
+        gender,
+        address
+    )
+VALUES (
+        'John',
+        'Doe',
+        'john@example.com',
+        'hashed_password',
+        '1234567890',
+        '1990-01-01',
+        'Male',
+        '123 Main St'
+    );
+INSERT INTO Doctors (
+        first_name,
+        last_name,
+        specialization,
+        email,
+        phone,
+        schedule
+    )
+VALUES (
+        'Dr. Smith',
+        'Johnson',
+        'Cardiology',
+        'drsmith@example.com',
+        '0987654321',
+        'Mon-Fri 9AM-5PM'
+    );

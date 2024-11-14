@@ -1,0 +1,9 @@
+CREATE TABLE insurance (
+    insurance_id INT AUTO_INCREMENT PRIMARY KEY,
+    patient_id INT NOT NULL,
+    insurance_company VARCHAR(255),
+    policy_number VARCHAR(255),
+    coverage_amount DECIMAL(10, 2),
+    expiry_date DATE,
+    FOREIGN KEY (patient_id) REFERENCES patients(patient_id)
+);

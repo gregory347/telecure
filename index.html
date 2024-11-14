@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teleCure Hospital</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="/images/fave.png" sizes="32x32">
+</head>
+
+<body>
+    <header>
+        <img src="/images/fave.png" alt="TeleCure Logo" width="100" height="100">
+        <h1>teleCure Hospital</h1>
+        <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#register">Register</a></li>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#appointments">Appointments</a></li>
+                <li><a href="#doctors">Doctors</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="services.html">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Registration Section -->
+        <section id="register">
+            <h2>Register</h2>
+            <form id="registrationForm">
+                <input type="text" name="first_name" placeholder="First Name" required>
+                <input type="text" name="last_name" placeholder="Last Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="tel" name="phone" placeholder="Phone" required>
+                <input type="date" name="date_of_birth" required>
+                <select name="gender" required>
+                    <option value="" disabled selected>Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+                <button type="submit">Register</button>
+            </form>
+        </section>
+
+        <!-- Login Section -->
+        <section id="login">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+
+        <!-- Appointments Section -->
+        <section id="appointments">
+            <h2>Book Appointment</h2>
+            <form id="appointmentForm">
+                <select name="doctor_id" required>
+                    <option value="" disabled selected>Select Doctor</option>
+                    <option value="1">Doctor Cheruiyot (Cardiology)</option>
+                    <option value="2">Doctor Cherunguz (Dermatology)</option>
+                    <option value="3">Doctor Chizi (Pediatrics)</option>
+                </select>
+                <input type="date" name="appointment_date" required>
+                <input type="time" name="appointment_time" required>
+                <button type="submit">Book Appointment</button>
+            </form>
+        </section>
+
+        <!-- Profile Section -->
+        <section id="profile">
+            <h2>Your Profile</h2>
+            <form id="profileForm">
+                <input type="text" name="first_name" placeholder="First Name" required>
+                <input type="text" name="last_name" placeholder="Last Name" required>
+                <input type="tel" name="phone" placeholder="Phone" required>
+                <input type="date" name="date_of_birth" required>
+                <select name="gender" required>
+                    <option value="" disabled selected>Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+                <button type="submit">Update Profile</button>
+            </form>
+        </section>
+
+        <!-- Doctors Section -->
+        <section id="doctors">
+            <h2>Manage Doctors</h2>
+            <form id="doctorForm">
+                <input type="text" name="first_name" placeholder="First Name" required>
+                <input type="text" name="last_name" placeholder="Last Name" required>
+                <input type="text" name="specialization" placeholder="Specialization" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="tel" name="phone" placeholder="Phone" required>
+                <textarea name="schedule" placeholder="Availability" required></textarea>
+                <button type="submit">Add Doctor</button>
+            </form>
+        </section>
+
+        <!-- Insurance Section -->
+        <section id="insuranceForm">
+            <h2>Update Your Insurance Cover</h2>
+            <form id="insuranceForm" action="/updateInsurance" method="POST">
+                <label for="insurance_company">Select Insurance Company:</label>
+                <select name="insurance_company" id="insurance_company" required>
+                    <option value="" disabled selected>Select Insurance Company</option>
+                    <option value="NHIF (now SHIF)">NHIF (now SHIF) Insurance</option>
+                    <option value="Jubilee">Jubilee Insurance</option>
+                    <option value="Madison">Madison Insurance</option>
+                    <option value="Heritage">Heritage Insurance</option>
+                </select>
+
+                <label for="policy_number">Policy Number:</label>
+                <input type="text" id="policy_number" name="policy_number" required>
+
+                <label for="coverage_amount">Coverage Amount:</label>
+                <input type="number" id="coverage_amount" name="coverage_amount" required>
+
+                <label for="expiry_date">Expiry Date:</label>
+                <input type="date" id="expiry_date" name="expiry_date" required>
+
+                <button type="submit">Update Insurance</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 TeleCure Hospital</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
